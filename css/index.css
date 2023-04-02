@@ -1,0 +1,392 @@
+/* 首页其它样式 */
+.main {
+    height: 455px;
+    margin-top: 10px;
+    box-sizing: content-box;
+}
+
+.focus {
+    position: absolute;
+    width: 950px;
+    height: 455px;
+    overflow: hidden;
+}
+
+.focus ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600%;
+}
+
+.focus ul li {
+    float: left;
+}
+
+.focus ul li img {
+    width: 950px;
+}
+
+.arrow-l,
+.arrow-r {
+    display: none;
+    position: absolute;
+    top: 50%;
+    /* 注意这里不要写left，因为一旦写left，下面的right和left同时出现，right就不生效了 */
+    z-index: 9999;
+    transform: translate(0, -50%);
+    width: 24px;
+    height: 40px;
+    background: rgba(0, 0, 0, .3);
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.arrow-r {
+    right: 0;
+}
+
+.circle {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.circle li {
+    float: left;
+    margin: 0 5px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    cursor: pointer;
+}
+
+.current {
+    background-color: #fff;
+}
+
+.newsflash {
+    float: right;
+    width: 250px;
+    height: 455px;
+}
+
+.news {
+    height: 165px;
+    border: 1px solid #e4e4e4;
+}
+
+.news-hd {
+    border-bottom: 1px dotted #e4e4e4;
+    padding: 0 15px;
+    height: 33px;
+    line-height: 33px;
+}
+
+.news-hd h5 {
+    float: left;
+    font-size: 14px;
+}
+
+.news-hd .more {
+    float: right;
+    font-size: 14px;
+    line-height: 33px;
+}
+
+.news-hd .more::after {
+    content: '\e95a';
+    font-family: 'icomoon';
+    vertical-align: middle;
+}
+
+.news-bd {
+    padding: 5px 15px 0;
+    font-size: 13px;
+}
+
+.news-bd ul li {
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.news-bd ul li:hover a {
+    color: #c81623;
+}
+
+.lifeservice {
+    border: 1px solid #e4e4e4;
+    border-top: none;
+    height: 209px;
+    overflow: hidden;
+}
+
+.lifeservice ul {
+    width: 252px;
+}
+
+.lifeservice ul li {
+    position: relative;
+    float: left;
+    width: 63px;
+    height: 71px;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    text-align: center;
+    font-size: 12px;
+}
+
+.lifeservice ul li i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    width: 24px;
+    height: 28px;
+    background-color: pink;
+    background: url(../images/icons.png) no-repeat;
+}
+
+.lifeservice ul li p {
+    transform: translate(0, 45px);
+}
+
+.lifeservice ul li:nth-child(1) i {
+    background-position: -16px -15px;
+}
+
+.lifeservice ul li:nth-child(2) i {
+    background-position: -79px -15px;
+}
+
+.lifeservice ul li:nth-child(3) i {
+    background-position: -142px -16px;
+}
+
+.lifeservice ul li:nth-child(4) i {
+    width: 28px;
+    background-position: -204px -15px;
+}
+
+.lifeservice ul li:nth-child(5) i {
+    background-position: -16px -89px;
+}
+
+.lifeservice ul li:nth-child(6) i {
+    background-position: -79px -89px;
+}
+
+.lifeservice ul li:nth-child(7) i {
+    background-position: -142px -89px;
+}
+
+.lifeservice ul li:nth-child(8) i {
+    background-position: -206px -89px;
+}
+
+.lifeservice ul li:nth-child(9) i {
+    background-position: -16px -160px;
+}
+
+.lifeservice ul li:nth-child(10) i {
+    background-position: -79px -160px;
+}
+
+.lifeservice ul li:nth-child(11) i {
+    background-position: -142px -156px;
+}
+
+.lifeservice ul li:nth-child(12) i {
+    background-position: -204px -160px;
+}
+
+.hot {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 12px;
+    height: 15px;
+    background: url(../images/jian.jpg) no-repeat;
+}
+
+.bargain {
+    margin-top: 5px;
+}
+
+/* 推荐模块 */
+.recom {
+    height: 163px;
+    background-color: #ebebeb;
+    margin-top: 12px;
+}
+
+.recom_hd {
+    float: left;
+    padding-top: 30px;
+    width: 205px;
+    height: 163px;
+    background-color: #5c5251;
+    text-align: center;
+}
+
+.recom_hd img {
+    transform: translate(0, -70px) scale(0.5);
+}
+
+.recom_bd {
+    float: left;
+}
+
+.recom_bd ul li {
+    position: relative;
+    float: left;
+}
+
+.recom_bd ul li img {
+    width: 248px;
+    height: 163px;
+}
+
+.recom_bd ul li:nth-child(-n+3)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 1px;
+    height: 145px;
+    background-color: #ddd;
+}
+
+/* floor模块 */
+.floor .w {
+    margin-top: 30px;
+}
+
+.box_hd {
+    height: 30px;
+    border-bottom: 2px solid #c81623;
+}
+
+.box_hd h3 {
+    float: left;
+    font-size: 18px;
+    color: #c81623;
+    font-weight: 400;
+}
+
+.tab_list {
+    float: right;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+.tab_list ul li {
+    float: left;
+}
+
+.tab_list ul li a {
+    margin: 0 10px;
+    padding: 0 5px;
+}
+
+.tab_list ul li a:hover {
+    background-color: #c81623;
+    color: #fff;
+}
+
+.box_bd {
+    height: 361px;
+}
+
+.tab_list_item1 div[class^="col"] {
+    float: left;
+    height: 361px;
+}
+
+.col_210 {
+    position: relative;
+    width: 210px;
+    background-color: #f9f9f9;
+    text-align: center;
+    font-size: 12px;
+}
+
+.col_210 ul {
+    padding-left: 12px;
+}
+
+.col_210 ul li {
+    float: left;
+    margin-right: 10px;
+    border-bottom: 1px solid #ccc;
+    width: 85px;
+    height: 34px;
+    text-align: center;
+    line-height: 33px;
+}
+
+.col_210 img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 210px;
+}
+
+.col_329 {
+    width: 329px;
+}
+
+.col_221 {
+    width: 221px;
+    border-right: 1px solid #ccc;
+}
+
+.col_219 {
+    width: 219px;
+}
+
+.phone .col_219 {
+    transform: translate(0, -1.5px);
+}
+
+.bb {
+    /* 一般情况下，a如果包含有宽度的盒子，a需要转为块级元素 */
+    display: block;
+    border-bottom: 1px solid #ccc;
+}
+
+.floor .bar {
+    margin: 20px 0;
+}
+
+/*电梯导航*/
+.fixedtool {
+    display: none;
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    width: 66px;
+    background-color: #fff;
+    transform: translate(-676px, 0);
+}
+
+.fixedtool li {
+    border-bottom: 1px solid #ccc;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.fixedtool .current {
+    background-color: #c81623;
+    color: #fff;
+}

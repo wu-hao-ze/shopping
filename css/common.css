@@ -1,0 +1,368 @@
+/* 声明字体图标 这里一定要注意路径的变化 */
+@font-face {
+    font-family: 'icomoon';
+    src: url('../icomoon/fonts/icomoon.eot?tomleg');
+    src: url('../icomoon/fonts/icomoon.eot?tomleg#iefix') format('embedded-opentype'),
+        url('../icomoon/fonts/icomoon.ttf?tomleg') format('truetype'),
+        url('../icomoon/fonts/icomoon.woff?tomleg') format('woff'),
+        url('../icomoon/fonts/icomoon.svg?tomleg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+/* 版心 */
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.style_red {
+    color: #c81623;
+}
+
+/* 快捷导航模块 */
+.shortcut {
+    height: 31px;
+    line-height: 31px;
+    background-color: #f1f1f1;
+    font-size: 12px;
+}
+
+.shortcut .fl ul li {
+    float: left;
+}
+
+.shortcut .fr ul li {
+    float: left;
+    padding: 0 18px;
+    border-right: 1px solid #000;
+    height: 18px;
+    line-height: 18px;
+    transform: translate(0, 6.5px);
+}
+
+
+.shortcut .fr ul li:last-child {
+    border-right: 0;
+}
+
+.arrow-icon::after {
+    content: '\e954';
+    font-family: 'icomoon';
+    display: inline-block;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
+/* header头部 */
+.header {
+    position: relative;
+    height: 105px;
+}
+
+.logo {
+    position: absolute;
+    top: 25px;
+    width: 171px;
+    height: 61px;
+}
+
+.logo a {
+    display: block;
+    width: 171px;
+    height: 61px;
+    background: url(../images/logo.png) no-repeat;
+    /* font-size: 0;京东的做法*/
+
+    /* 淘宝的做法是把文字移出盒子之后让文字隐藏 */
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.search {
+    position: absolute;
+    left: 346px;
+    top: 30px;
+    width: 538px;
+    height: 36px;
+    border: 2px solid #b1191a;
+}
+
+.search input {
+    float: left;
+    width: 454px;
+    height: 32px;
+    padding-left: 10px;
+}
+
+.search button {
+    float: left;
+    border: 0;
+    width: 80px;
+    height: 34px;
+    background-color: #b1191a;
+    text-align: center;
+    line-height: 34px;
+    font-size: 15px;
+    color: #fff;
+    transform: translate(1px, -1px);
+}
+
+.hotwords {
+    position: absolute;
+    top: 66px;
+    left: 346px;
+    font-size: 13px;
+}
+
+.hotwords a {
+    margin: 0 10px;
+}
+
+.shopcar {
+    position: absolute;
+    right: 60px;
+    top: 32px;
+    border: 1px solid #dfdfdf;
+    width: 140px;
+    height: 35px;
+    background-color: #f7f7f7;
+    line-height: 35px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.shopcar::before {
+    content: '\e93a';
+    font-family: 'icomoon';
+    margin-right: 5px;
+    color: #b1191a;
+}
+
+.shopcar::after {
+    content: '\e95a';
+    font-family: 'icomoon';
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.count {
+    /* 子绝父绝 */
+    position: absolute;
+    top: -2px;
+    /* 这个一定要用left，而不是right，因为如果数量增加不再是8，比如8000，这样的话数字往后延展，写left的话，标准线就是8的左侧，这样可以顺利的让多出来的数字向右延伸，如果是写right的话，就是以8的右侧为基准，多出来的数字会让整个数字向左移动 */
+    left: 100px;
+    border-radius: 7px 7px 7px 0;
+    padding: 0 5px;
+    height: 14px;
+    line-height: 14px;
+    color: #fff;
+    background-color: #e60012;
+}
+
+/* nav模块 */
+.nav {
+    border-bottom: 2px solid #b1191a;
+    height: 47px;
+}
+
+.nav .dropdown {
+    float: left;
+    width: 210px;
+    height: 46px;
+    background-color: #b1191a;
+}
+
+.dropdown .dt {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.dropdown .dd {
+    display: none;
+    position: relative;
+    width: 210px;
+    height: 465px;
+    background-color: #c81623;
+}
+
+/* 注意是dropdown的hover改变dd，而不是dt的hover改变dd，父级hover改变子级 */
+.dropdown:hover .dd {
+    display: block;
+    z-index: 2;
+}
+
+.dropdown .dd ul li {
+    position: relative;
+    height: 31px;
+    line-height: 31px;
+    margin-left: 2px;
+    padding-left: 10px;
+}
+
+.dropdown .dd ul li a {
+    display: inline-block;
+    width: 210px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.dropdown .dd ul li a::after {
+    content: '\e95a';
+    font-family: 'icomoon';
+    position: absolute;
+    top: 1px;
+    right: 10px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.dropdown .dd ul li:hover {
+    background-color: #fff;
+}
+
+.dropdown .dd ul li:hover a {
+    color: #c81623;
+}
+
+/* 注意是先hover后after，注意顺序 */
+.dropdown .dd ul li a:hover::after {
+    color: #c81623;
+}
+
+.nav .navitems {
+    float: left;
+}
+
+.navitems ul li {
+    float: left;
+
+}
+
+.navitems ul li a {
+    margin: 0 25px;
+    line-height: 45px;
+    font-size: 16px;
+}
+
+.navitems ul li a:hover {
+    color: #c81623;
+}
+
+
+/* 底部模块 */
+.footer {
+    height: 415px;
+    background-color: #f5f5f5;
+    padding-top: 30px;
+}
+
+.mod_service {
+    height: 80px;
+    border-bottom: 1px solid #ccc;
+}
+
+.mod_service ul li {
+    float: left;
+    width: 240px;
+    height: 50px;
+    padding-left: 35px;
+}
+
+.mod_service ul li h5 {
+    float: left;
+    width: 50px;
+    height: 50px;
+    background: url(../images/icons.png) no-repeat;
+    margin-right: 8px;
+}
+
+.mod_service .service_txt1 {
+    background-position: -252px -2px;
+}
+
+.mod_service .service_txt2 {
+    background-position: -254px -53px;
+}
+
+.mod_service .service_txt3 {
+    background-position: -257px -106px;
+}
+
+.mod_service .service_txt4 {
+    background-position: -257px -157px;
+}
+
+.mod_service .service_txt5 {
+    background-position: -256px -208px;
+}
+
+.mod_service h4 {
+    font-size: 14px;
+}
+
+.mod_service p {
+    font-size: 12px;
+}
+
+.mod_help {
+    height: 185px;
+    border-bottom: 1px solid #ccc;
+    padding-top: 20px;
+    padding-left: 50px;
+}
+
+.mod_help dl {
+    float: left;
+    width: 200px;
+}
+
+.mod_help dl:last-child {
+    width: 90px;
+    text-align: center;
+}
+
+.mod_help dl:last-child dd img {
+    margin-bottom: 10px;
+    width: 80px;
+}
+
+.mod_help dl dt {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.mod_help dl dd {
+    font-size: 12px;
+}
+
+.mod_copyright {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 12px;
+}
+
+.links {
+    margin-bottom: 15px;
+}
+
+.links a {
+    color: red;
+}
+
+.copyright {
+    line-height: 20px;
+}

@@ -1,0 +1,79 @@
+/* 列表页专有的css */
+.nav {
+    /* 溢出隐藏 */
+    /* nav中行高大于盒子的高度，那么就会浮动溢出一些， 此时如果下面加文字，文字就会围绕浮动元素，所以把nav的溢出隐藏 */
+    overflow: hidden;
+}
+
+.sk {
+    position: absolute;
+    left: 190px;
+    top: 40px;
+    border-left: 1px solid #c81523;
+    padding: 3px 0 0 14px;
+}
+
+.sk_list {
+    float: left;
+}
+
+.sk_list ul li {
+    float: left;
+}
+
+.sk_list ul li a {
+    display: block;
+    padding: 0 30px;
+    line-height: 47px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+
+.sk_con {
+    float: left;
+}
+
+.sk_con ul li {
+    float: left;
+}
+
+.sk_con ul li:hover a {
+    color: #c81523;
+}
+
+.sk_con ul li a {
+    display: block;
+    padding: 0 20px;
+    line-height: 49px;
+    font-size: 14px;
+}
+
+.sk_con ul li:last-child a::after {
+    content: '\e91e';
+    font-family: 'icomoon';
+    vertical-align: middle;
+}
+
+.sk_bd ul li {
+    overflow: hidden;
+    float: left;
+    margin-right: 13px;
+    width: 290px;
+    height: 460px;
+    /* 鼠标没经过的时候就设置有边框，经过时把透明色显示成红色就完事了 */
+    border: 1px solid transparent;
+}
+
+.sk_bd ul li img {
+    width: 100%;
+    height: 100%;
+}
+
+.sk_bd ul li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.sk_bd ul li:hover {
+    border: 1px solid #c81523;
+}
